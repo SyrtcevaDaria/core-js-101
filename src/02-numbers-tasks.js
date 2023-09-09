@@ -20,7 +20,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  return width*height;
+  return width * height;
 }
 
 
@@ -36,7 +36,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCircleCircumference(radius) {
-  return 2*Math.PI*radius;
+  return 2 * Math.PI * radius;
 }
 
 /**
@@ -52,7 +52,7 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return value1/2+value2/2;
+  return value1 / 2 + value2 / 2;
 }
 
 /**
@@ -71,7 +71,7 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  return (Math.sqrt(Math.abs(x1-x2)**2+Math.abs(y1-y2)**2));
+  return (Math.sqrt(Math.abs(x1 - x2) ** 2 + Math.abs(y1 - y2) ** 2));
 }
 
 /**
@@ -86,8 +86,8 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-function getLinearEquationRoot(a, b ) {
-  return (-b)/a
+function getLinearEquationRoot(a, b) {
+  return (-b) / a;
 }
 
 
@@ -110,8 +110,8 @@ function getLinearEquationRoot(a, b ) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  let c = (x1*x2+y1*y2)/(Math.sqrt(x1**2+y1**2)*Math.sqrt(x2**2+y2**2));
-  return Math.acos(c); 
+  const c = (x1 * x2 + y1 * y2) / (Math.sqrt(x1 ** 2 + y1 ** 2) * Math.sqrt(x2 ** 2 + y2 ** 2));
+  return Math.acos(c);
 }
 
 /**
@@ -127,7 +127,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  return value%10;
+  return value % 10;
 }
 
 
@@ -143,7 +143,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-  return Number(value)
+  return Number(value);
 }
 
 /**
@@ -160,7 +160,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelepipedDiagonal(a, b, c) {
-  return Math.sqrt(a**2+b**2+c**2)
+  return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 
@@ -182,7 +182,7 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-  return pow>0? Math.round(num/(10**pow).toFixed(pow))*(10**pow): num;
+  return pow > 0 ? Math.round(num / (10 ** pow).toFixed(pow)) * (10 ** pow) : num;
 }
 
 /**
@@ -203,9 +203,9 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-  if (n<=0||n===1) return false;
-  for(let i=2;i<=Math.sqrt(n);i++){
-    if(n%i===0){
+  if (n <= 0 || n === 1) return false;
+  for (let i = 2; i <= Math.sqrt(n); i += 1) {
+    if (n % i === 0) {
       return false;
     }
   }
@@ -228,7 +228,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  if(Number.isNaN(Number(value))){
+  if (Number.isNaN(Number(value))) {
     return def;
   }
   return Number(value);
